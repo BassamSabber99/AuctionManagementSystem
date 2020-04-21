@@ -1,0 +1,144 @@
+create table USERS(
+  USER_ID Number Primary key,
+  Name varchar(14),
+  Phone Number(11),
+  Address varchar(50),
+  Balance Number,
+  E_Mail varchar(20),
+  Password varchar(100),
+  gender varchar(10)
+);
+
+create table BIDDERS(
+  User_ID Number ,
+  Bidder_Name Varchar(14) primary key,
+  Value NUMBER
+);
+
+create table SELLERS(
+  User_ID Number ,
+  Seller_Name Varchar(14) primary key
+);
+
+create table SHIPPING_CARTS(
+  ship_id Number primary key,
+  Quantity Number,
+  Bidder_ID Number
+);
+
+
+create table SHIPPING_ITEMS(
+  ship_id Number ,
+  itm_Name varchar(14) primary key ,
+  Value  Number,
+  Auc_ID Number
+);
+
+create table ITEMS(
+  ITEM_ID Number primary key ,
+  Name varchar(14)  ,
+  Description  varchar(50),
+  Value Number,
+  Seller_ID Number,
+  cat_Id Number
+);
+
+create table CATEGORIES(
+  CAT_ID Number primary key ,
+  Cat_Name Varchar(10)
+);
+
+create table AUCTIONS(
+  AUC_ID Number primary key ,
+  S_Date DAtE,
+  E_Date DATE,
+  Status varchar(8)
+);
+
+create table BIDDER_AUCTIONS(
+  AUC_ID NUMBER  , 
+  USER_ID Number ,
+  Value Number,
+  constraint t_pk primary key (AUC_ID,USER_ID)
+);
+
+create table SELLER_AUCTIONS(
+  AUC_ID NUMBER  , 
+  USER_ID Number ,
+  itm_ID Number ,
+  constraint t2_pk primary key (AUC_ID,USER_ID)
+);
+
+alter table bidders
+add foreign key (USER_ID) references USERS(USER_ID);
+
+alter table sellers 
+add foreign key (USER_ID) references USERS(USER_ID);
+
+alter table SHIPPING_CARTS 
+add foreign key (Bidder_ID) references USERS(USER_ID);
+
+alter table SHIPPING_ITEMS
+add foreign key(ship_id) references SHIPPING_CARTS(ship_id);
+
+alter table ITEMS
+add foreign key(Seller_ID) references USERS(USER_ID);
+
+alter table ITEMS
+add foreign key(cat_Id) references CATEGORIES(CAT_ID);
+
+alter table SHIPPING_ITEMS
+add foreign key(AUC_ID) references AUCTIONS(AUC_ID);
+
+alter table SELLER_AUCTIONS 
+add foreign key (itm_ID) references ITEMS(ITEM_ID);
+
+/////////////////////Pupulate////////////////////////////////////////////////////////////////
+
+insert into users(USER_ID, name, phone, address, balance, e_mail, password, gender)
+values (1,'jack',1141248413,'50st new jersy',5000,'j558@yahoo.com','123456789','male');
+
+insert into users(USER_ID, name, phone, address, balance, e_mail, password, gender)
+values (2,'sam',018458797,'62st new jersy',5000,'j558@yahoo.com','123456789','male');
+
+insert into users(USER_ID, name, phone, address, balance, e_mail, password, gender)
+values (3,'maria',0105487,'100 st madint nsr',2500,'maria558@gmail.com','000000001','female');
+
+insert into users(USER_ID, name, phone, address, balance, e_mail, password, gender)
+values (4,'alison',002579846512,'150 st berlin ',3000,'alio@gm.com','8125458','female');
+
+insert into sellers(seller_name, user_id)
+Values('jack',1);
+
+insert into sellers(seller_name, user_id)
+Values('maria',3);
+
+insert into bidders(bidder_name, user_id)
+Values('sam',2);
+
+insert into bidders(bidder_name, user_id)
+Values('alison',4);
+
+insert into categories(cat_id, cat_name)
+Values(1,'cars');
+
+insert into categories(cat_id, cat_name)
+Values(2,'books');
+
+insert into categories(cat_id, cat_name)
+Values(3,'Mobiles');
+
+insert into categories(cat_id, cat_name)
+Values(4,'Computertools(HW)');
+
+insert into items(item_id, name, description, value, seller_id, cat_id)
+Values(1,'honda','new car with low used',1000,1,1);
+
+insert into items(item_id, name, description, value, seller_id, cat_id)
+Values(2,'KeyBoard','Original Key Board with smart Keys ',500,3,4);
+
+
+
+
+
+
