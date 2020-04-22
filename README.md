@@ -1,7 +1,10 @@
-Hello, Thanks To You For your interest To see My project.
-Please Before You Run My project Please Be sure that you have an oracle DataBase.
-service-name: orcl
-username: hr
-password: hr
+Dear Viewer,
+Thanks for being interested to see our Auction Management System.
 
-thanks in advance
+ - NOTE:-
+        Please Before Running the system make sure that you have ORACLE on your machine, then attach the database.
+        service-name: orcl
+        username: hr
+        password: hr
+
+We wish an interesting tour for you!!.
