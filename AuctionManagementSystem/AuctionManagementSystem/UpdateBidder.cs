@@ -35,8 +35,8 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            HomerBidder hb = new HomerBidder();
-            hb.Show();
+            HomerBidder homeBidder = new HomerBidder();
+            homeBidder.Show();
             this.Hide();
         }
 

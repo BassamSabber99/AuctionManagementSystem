@@ -39,22 +39,22 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bidderview = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.edatetxt = new System.Windows.Forms.Label();
+            this.labe = new System.Windows.Forms.Label();
+            this.sdatetxt = new System.Windows.Forms.Label();
+            this.itmdestxt = new System.Windows.Forms.Label();
+            this.itmvaltxt = new System.Windows.Forms.Label();
+            this.itmnametx = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bidderView = new System.Windows.Forms.DataGridView();
             this.bidbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bidval = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.itmnametx = new System.Windows.Forms.Label();
-            this.itmvaltxt = new System.Windows.Forms.Label();
-            this.itmdestxt = new System.Windows.Forms.Label();
-            this.sdatetxt = new System.Windows.Forms.Label();
-            this.labe = new System.Windows.Forms.Label();
-            this.edatetxt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bidderview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidderView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -166,45 +166,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bid Item Info";
             // 
-            // groupBox2
+            // edatetxt
             // 
-            this.groupBox2.Controls.Add(this.bidderview);
-            this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(40, 82);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 261);
-            this.groupBox2.TabIndex = 94;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bidders";
+            this.edatetxt.AutoSize = true;
+            this.edatetxt.Location = new System.Drawing.Point(107, 220);
+            this.edatetxt.Name = "edatetxt";
+            this.edatetxt.Size = new System.Drawing.Size(80, 15);
+            this.edatetxt.TabIndex = 9;
+            this.edatetxt.Text = "item Value:";
+            this.edatetxt.Click += new System.EventHandler(this.label13_Click);
             // 
-            // bidderview
+            // labe
             // 
-            this.bidderview.BackgroundColor = System.Drawing.Color.Maroon;
-            this.bidderview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bidderview.GridColor = System.Drawing.Color.DarkRed;
-            this.bidderview.Location = new System.Drawing.Point(6, 19);
-            this.bidderview.Name = "bidderview";
-            this.bidderview.Size = new System.Drawing.Size(240, 236);
-            this.bidderview.TabIndex = 0;
+            this.labe.AutoSize = true;
+            this.labe.Location = new System.Drawing.Point(19, 138);
+            this.labe.Name = "labe";
+            this.labe.Size = new System.Drawing.Size(87, 15);
+            this.labe.TabIndex = 8;
+            this.labe.Text = "Description:";
             // 
-            // label1
+            // sdatetxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "item Name:";
+            this.sdatetxt.AutoSize = true;
+            this.sdatetxt.Location = new System.Drawing.Point(106, 178);
+            this.sdatetxt.Name = "sdatetxt";
+            this.sdatetxt.Size = new System.Drawing.Size(81, 15);
+            this.sdatetxt.TabIndex = 7;
+            this.sdatetxt.Text = "item Name:";
             // 
-            // label2
+            // itmdestxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "item Value:";
+            this.itmdestxt.AutoSize = true;
+            this.itmdestxt.Location = new System.Drawing.Point(105, 138);
+            this.itmdestxt.Name = "itmdestxt";
+            this.itmdestxt.Size = new System.Drawing.Size(81, 15);
+            this.itmdestxt.TabIndex = 6;
+            this.itmdestxt.Text = "item Name:";
+            // 
+            // itmvaltxt
+            // 
+            this.itmvaltxt.AutoSize = true;
+            this.itmvaltxt.Location = new System.Drawing.Point(106, 94);
+            this.itmvaltxt.Name = "itmvaltxt";
+            this.itmvaltxt.Size = new System.Drawing.Size(81, 15);
+            this.itmvaltxt.TabIndex = 5;
+            this.itmvaltxt.Text = "item Name:";
+            // 
+            // itmnametx
+            // 
+            this.itmnametx.AutoSize = true;
+            this.itmnametx.Location = new System.Drawing.Point(106, 40);
+            this.itmnametx.Name = "itmnametx";
+            this.itmnametx.Size = new System.Drawing.Size(81, 15);
+            this.itmnametx.TabIndex = 4;
+            this.itmnametx.Text = "item Name:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "item End:";
             // 
             // label3
             // 
@@ -215,14 +239,45 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Start Date:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "item End:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "item Value:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "item Name:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.bidderView);
+            this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(40, 82);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(252, 261);
+            this.groupBox2.TabIndex = 94;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Bidders";
+            // 
+            // bidderView
+            // 
+            this.bidderView.BackgroundColor = System.Drawing.Color.Maroon;
+            this.bidderView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bidderView.GridColor = System.Drawing.Color.DarkRed;
+            this.bidderView.Location = new System.Drawing.Point(6, 19);
+            this.bidderView.Name = "bidderView";
+            this.bidderView.Size = new System.Drawing.Size(240, 236);
+            this.bidderView.TabIndex = 0;
             // 
             // bidbtn
             // 
@@ -279,61 +334,6 @@
             this.label6.TabIndex = 103;
             this.label6.Text = "* Please Put Value Greater Then The BIggest Value .\r\n";
             // 
-            // itmnametx
-            // 
-            this.itmnametx.AutoSize = true;
-            this.itmnametx.Location = new System.Drawing.Point(106, 40);
-            this.itmnametx.Name = "itmnametx";
-            this.itmnametx.Size = new System.Drawing.Size(81, 15);
-            this.itmnametx.TabIndex = 4;
-            this.itmnametx.Text = "item Name:";
-            // 
-            // itmvaltxt
-            // 
-            this.itmvaltxt.AutoSize = true;
-            this.itmvaltxt.Location = new System.Drawing.Point(106, 94);
-            this.itmvaltxt.Name = "itmvaltxt";
-            this.itmvaltxt.Size = new System.Drawing.Size(81, 15);
-            this.itmvaltxt.TabIndex = 5;
-            this.itmvaltxt.Text = "item Name:";
-            // 
-            // itmdestxt
-            // 
-            this.itmdestxt.AutoSize = true;
-            this.itmdestxt.Location = new System.Drawing.Point(105, 138);
-            this.itmdestxt.Name = "itmdestxt";
-            this.itmdestxt.Size = new System.Drawing.Size(81, 15);
-            this.itmdestxt.TabIndex = 6;
-            this.itmdestxt.Text = "item Name:";
-            // 
-            // sdatetxt
-            // 
-            this.sdatetxt.AutoSize = true;
-            this.sdatetxt.Location = new System.Drawing.Point(106, 178);
-            this.sdatetxt.Name = "sdatetxt";
-            this.sdatetxt.Size = new System.Drawing.Size(81, 15);
-            this.sdatetxt.TabIndex = 7;
-            this.sdatetxt.Text = "item Name:";
-            // 
-            // labe
-            // 
-            this.labe.AutoSize = true;
-            this.labe.Location = new System.Drawing.Point(19, 138);
-            this.labe.Name = "labe";
-            this.labe.Size = new System.Drawing.Size(87, 15);
-            this.labe.TabIndex = 8;
-            this.labe.Text = "Description:";
-            // 
-            // edatetxt
-            // 
-            this.edatetxt.AutoSize = true;
-            this.edatetxt.Location = new System.Drawing.Point(107, 220);
-            this.edatetxt.Name = "edatetxt";
-            this.edatetxt.Size = new System.Drawing.Size(80, 15);
-            this.edatetxt.TabIndex = 9;
-            this.edatetxt.Text = "item Value:";
-            this.edatetxt.Click += new System.EventHandler(this.label13_Click);
-            // 
             // AuctionStartBidder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +363,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bidderview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidderView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +380,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView bidderview;
+        private System.Windows.Forms.DataGridView bidderView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

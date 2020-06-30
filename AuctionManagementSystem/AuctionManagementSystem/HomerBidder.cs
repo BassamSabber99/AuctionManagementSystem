@@ -83,30 +83,30 @@ namespace AuctionManagementSystem
 
         private void updaccbtn_Click(object sender, EventArgs e)
         {
-            UpdateBidder up = new UpdateBidder();
+            UpdateBidder updateBidder = new UpdateBidder();
             this.Hide();
-            up.Show();
+            updateBidder.Show();
         }
 
         private void serchitmbtn_Click(object sender, EventArgs e)
         {
-            SearchForItems sfi = new SearchForItems();
+            SearchForItems searchForItems = new SearchForItems();
             this.Hide();
-            sfi.Show();
+            searchForItems.Show();
         }
 
         private void allauctionbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AllAuctionBidder alb = new AllAuctionBidder();
-            alb.Show();
+            AllAuctionBidder allAuctionBidder = new AllAuctionBidder();
+            allAuctionBidder.Show();
         }
 
         private void shipbtn_Click(object sender, EventArgs e)
         {
-            ShippingCart sc = new ShippingCart();
+            ShippingCart shippingCart = new ShippingCart();
             this.Hide();
-            sc.Show();
+            shippingCart.Show();
         }
     }
 }

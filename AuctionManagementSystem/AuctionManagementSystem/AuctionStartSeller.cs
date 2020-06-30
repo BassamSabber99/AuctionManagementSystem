@@ -36,18 +36,18 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AllAuctions al = new AllAuctions();
-            al.Show();
+            AllAuctions allAuction = new AllAuctions();
+            allAuction.Show();
         }
         public void ReLoad()
         {
 
-            bidderview.ReadOnly = true;
-            bidderview.Columns.Clear();
-            bidderview.Rows.Clear();
-            bidderview.ColumnCount = 2;
-            bidderview.Columns[0].Name = "Bidder_Name";
-            bidderview.Columns[1].Name = "Bid_Value";
+            bidderView.ReadOnly = true;
+            bidderView.Columns.Clear();
+            bidderView.Rows.Clear();
+            bidderView.ColumnCount = 2;
+            bidderView.Columns[0].Name = "Bidder_Name";
+            bidderView.Columns[1].Name = "Bid_Value";
 
             OracleCommand oc = new OracleCommand();
             oc.Connection = con;
@@ -60,7 +60,7 @@ namespace AuctionManagementSystem
             OracleDataReader dr4 = oc.ExecuteReader();
             while (dr4.Read())
             {
-                bidderview.Rows.Add(dr4[0], dr4[1]);
+                bidderView.Rows.Add(dr4[0], dr4[1]);
             }
             dr4.Close();
         }

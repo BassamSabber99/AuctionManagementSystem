@@ -38,7 +38,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.aucttionview = new System.Windows.Forms.DataGridView();
+            this.auctionsView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.createbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.allaucbtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aucttionview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionsView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -130,17 +130,17 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // aucttionview
+            // auctionsView
             // 
-            this.aucttionview.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.aucttionview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aucttionview.Location = new System.Drawing.Point(147, 148);
-            this.aucttionview.Name = "aucttionview";
-            this.aucttionview.Size = new System.Drawing.Size(736, 210);
-            this.aucttionview.TabIndex = 87;
-            this.aucttionview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.aucttionview_CellClick);
-            this.aucttionview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.aucttionview_CellContentClick);
-            this.aucttionview.RowDividerDoubleClick += new System.Windows.Forms.DataGridViewRowDividerDoubleClickEventHandler(this.aucttionview_RowDividerDoubleClick);
+            this.auctionsView.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.auctionsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.auctionsView.Location = new System.Drawing.Point(147, 148);
+            this.auctionsView.Name = "auctionsView";
+            this.auctionsView.Size = new System.Drawing.Size(736, 210);
+            this.auctionsView.TabIndex = 87;
+            this.auctionsView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.aucttionview_CellClick);
+            this.auctionsView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.aucttionview_CellContentClick);
+            this.auctionsView.RowDividerDoubleClick += new System.Windows.Forms.DataGridViewRowDividerDoubleClickEventHandler(this.aucttionview_RowDividerDoubleClick);
             // 
             // label1
             // 
@@ -214,7 +214,7 @@
             this.Controls.Add(this.allaucbtn);
             this.Controls.Add(this.createbtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.aucttionview);
+            this.Controls.Add(this.auctionsView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -229,7 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aucttionview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionsView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +244,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.DataGridView aucttionview;
+        private System.Windows.Forms.DataGridView auctionsView;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuThinButton2 createbtn;

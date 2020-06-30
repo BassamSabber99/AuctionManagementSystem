@@ -26,15 +26,15 @@ namespace AuctionManagementSystem
 
         private void SearchForItems_Load(object sender, EventArgs e)
         {
-            itmview.ReadOnly = true;
-            itmview.Columns.Clear();
+            itmView.ReadOnly = true;
+            itmView.Columns.Clear();
             string cmdstr = @"select ITEM_ID , NAME , DESCRIPTION , VALUE , SELLER_ID , CAT_NAME from items i, categories c
                             where i.CAT_ID = c.CAT_ID
                             order by ITEM_ID";
             adapter = new OracleDataAdapter(cmdstr,ordb);
             ds = new DataSet();
             adapter.Fill(ds);
-            itmview.DataSource = ds.Tables[0];
+            itmView.DataSource = ds.Tables[0];
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,8 +51,8 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            HomerBidder hb = new HomerBidder();
-            hb.Show();
+            HomerBidder homeBidder = new HomerBidder();
+            homeBidder.Show();
             this.Hide();
         }
 
@@ -71,7 +71,7 @@ namespace AuctionManagementSystem
             adapter.SelectCommand.Parameters.Add("name", itmnametxt.Text.ToString());
             ds = new DataSet();
             adapter.Fill(ds);
-            itmview.DataSource = ds.Tables[0];
+            itmView.DataSource = ds.Tables[0];
         }
 
         private void itmnametxt_OnValueChanged(object sender, EventArgs e)
@@ -81,9 +81,9 @@ namespace AuctionManagementSystem
 
         private void allaucbtn_Click(object sender, EventArgs e)
         {
-            ItemsReport ir = new ItemsReport();
+            ItemsReport itemReport = new ItemsReport();
             this.Hide();
-            ir.Show();
+            itemReport.Show();
         }
     }
 }

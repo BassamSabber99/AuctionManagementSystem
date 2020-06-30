@@ -16,7 +16,7 @@ namespace AuctionManagementSystem
 {
     public partial class AllAuctionsReport : Form
     {
-        ReportAllAuction cr1;
+        ReportAllAuction report1;
         public AllAuctionsReport()
         {
             InitializeComponent();
@@ -25,8 +25,8 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AllAuctions aa = new AllAuctions();
-            aa.Show();
+            AllAuctions allAuction = new AllAuctions();
+            allAuction.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,10 +42,10 @@ namespace AuctionManagementSystem
 
         private void AllAuctionsReport_Load(object sender, EventArgs e)
         {
-           cr1 = new ReportAllAuction();
-            foreach(ParameterDiscreteValue v in cr1.ParameterFields[0].DefaultValues)
+           report1 = new ReportAllAuction();
+            foreach(ParameterDiscreteValue v in report1.ParameterFields[0].DefaultValues)
             {
-                statcombobox.Items.Add(v.Value);
+                stateCombobox.Items.Add(v.Value);
             }
 
         }
@@ -57,8 +57,8 @@ namespace AuctionManagementSystem
 
         private void genebtn_Click(object sender, EventArgs e)
         {
-            cr1.SetParameterValue(0,statcombobox.Text);
-            crystalReportViewer1.ReportSource = cr1;
+            report1.SetParameterValue(0,stateCombobox.Text);
+            crystalReportViewer1.ReportSource = report1;
         }
     }
 }

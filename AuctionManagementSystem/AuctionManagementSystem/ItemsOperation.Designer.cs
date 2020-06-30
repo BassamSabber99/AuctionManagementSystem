@@ -36,24 +36,24 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.itmview = new System.Windows.Forms.DataGridView();
+            this.itmView = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.myitemview = new System.Windows.Forms.DataGridView();
+            this.myItemView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.allcategorylist = new System.Windows.Forms.ListBox();
+            this.allCategoryList = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itmview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itmView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myitemview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myItemView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -111,15 +111,15 @@
             this.bunifuDragControl1.TargetControl = null;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // itmview
+            // itmView
             // 
-            this.itmview.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.itmview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itmview.Location = new System.Drawing.Point(28, 121);
-            this.itmview.Name = "itmview";
-            this.itmview.Size = new System.Drawing.Size(423, 192);
-            this.itmview.TabIndex = 47;
-            this.itmview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itmview_CellContentClick);
+            this.itmView.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.itmView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itmView.Location = new System.Drawing.Point(28, 121);
+            this.itmView.Name = "itmView";
+            this.itmView.Size = new System.Drawing.Size(423, 192);
+            this.itmView.TabIndex = 47;
+            this.itmView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itmview_CellContentClick);
             // 
             // pictureBox4
             // 
@@ -158,15 +158,15 @@
             this.savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
-            // myitemview
+            // myItemView
             // 
-            this.myitemview.BackgroundColor = System.Drawing.Color.Gray;
-            this.myitemview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.myitemview.Location = new System.Drawing.Point(481, 121);
-            this.myitemview.Name = "myitemview";
-            this.myitemview.Size = new System.Drawing.Size(423, 192);
-            this.myitemview.TabIndex = 59;
-            this.myitemview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myitemview_CellContentClick);
+            this.myItemView.BackgroundColor = System.Drawing.Color.Gray;
+            this.myItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.myItemView.Location = new System.Drawing.Point(481, 121);
+            this.myItemView.Name = "myItemView";
+            this.myItemView.Size = new System.Drawing.Size(423, 192);
+            this.myItemView.TabIndex = 59;
+            this.myItemView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myitemview_CellContentClick);
             // 
             // label1
             // 
@@ -212,18 +212,18 @@
             this.label4.TabIndex = 63;
             this.label4.Text = "* Read Only";
             // 
-            // allcategorylist
+            // allCategoryList
             // 
-            this.allcategorylist.BackColor = System.Drawing.Color.MidnightBlue;
-            this.allcategorylist.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allcategorylist.ForeColor = System.Drawing.Color.White;
-            this.allcategorylist.FormattingEnabled = true;
-            this.allcategorylist.ItemHeight = 12;
-            this.allcategorylist.Location = new System.Drawing.Point(331, 336);
-            this.allcategorylist.Name = "allcategorylist";
-            this.allcategorylist.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.allcategorylist.Size = new System.Drawing.Size(120, 136);
-            this.allcategorylist.TabIndex = 64;
+            this.allCategoryList.BackColor = System.Drawing.Color.MidnightBlue;
+            this.allCategoryList.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allCategoryList.ForeColor = System.Drawing.Color.White;
+            this.allCategoryList.FormattingEnabled = true;
+            this.allCategoryList.ItemHeight = 12;
+            this.allCategoryList.Location = new System.Drawing.Point(331, 336);
+            this.allCategoryList.Name = "allCategoryList";
+            this.allCategoryList.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.allCategoryList.Size = new System.Drawing.Size(120, 136);
+            this.allCategoryList.TabIndex = 64;
             // 
             // label5
             // 
@@ -255,15 +255,15 @@
             this.ClientSize = new System.Drawing.Size(950, 500);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.allcategorylist);
+            this.Controls.Add(this.allCategoryList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.myitemview);
+            this.Controls.Add(this.myItemView);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.itmview);
+            this.Controls.Add(this.itmView);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
@@ -277,9 +277,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itmview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itmView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myitemview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myItemView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,17 +293,17 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.DataGridView itmview;
+        private System.Windows.Forms.DataGridView itmView;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuThinButton2 savebtn;
-        private System.Windows.Forms.DataGridView myitemview;
+        private System.Windows.Forms.DataGridView myItemView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox allcategorylist;
+        private System.Windows.Forms.ListBox allCategoryList;
         private System.Windows.Forms.Label label6;
     }
 }

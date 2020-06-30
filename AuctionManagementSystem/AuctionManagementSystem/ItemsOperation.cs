@@ -38,16 +38,16 @@ namespace AuctionManagementSystem
         {
             using (con =new OracleConnection(ordb))
             {
-                itmview.ReadOnly = true;
-                itmview.Columns.Clear();
-                itmview.Rows.Clear();
-                itmview.ColumnCount = 6;
-                itmview.Columns[0].Name = "ID";
-                itmview.Columns[1].Name = "Name";
-                itmview.Columns[2].Name = "Description";
-                itmview.Columns[3].Name = "value";
-                itmview.Columns[4].Name = "Seller ID";
-                itmview.Columns[5].Name = "Category Name";
+                itmView.ReadOnly = true;
+                itmView.Columns.Clear();
+                itmView.Rows.Clear();
+                itmView.ColumnCount = 6;
+                itmView.Columns[0].Name = "ID";
+                itmView.Columns[1].Name = "Name";
+                itmView.Columns[2].Name = "Description";
+                itmView.Columns[3].Name = "value";
+                itmView.Columns[4].Name = "Seller ID";
+                itmView.Columns[5].Name = "Category Name";
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
@@ -57,7 +57,7 @@ namespace AuctionManagementSystem
                 OracleDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    itmview.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
+                    itmView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
                 }
                 dr.Close();
             }
@@ -66,20 +66,20 @@ namespace AuctionManagementSystem
         private void ItemsOperation_Load(object sender, EventArgs e)
         {
             
-                ReLoad();
+               ReLoad();
             using (con = new OracleConnection(ordb))
             {
                 con.Open();
-                allcategorylist.ClearSelected();
+                allCategoryList.ClearSelected();
                 OracleCommand c = new OracleCommand();
                 c.Connection = con;
                 c.CommandText = "select * from categories order by cat_id";
                 c.CommandType = CommandType.Text;
                 OracleDataReader r = c.ExecuteReader();
-                allcategorylist.Items.Add("ID -  Name");
+                allCategoryList.Items.Add("ID -  Name");
                 while (r.Read())
                 {
-                    allcategorylist.Items.Add(r[0] + "  -  " + r[1]);
+                    allCategoryList.Items.Add(r[0] + "  -  " + r[1]);
                 }
                 r.Close();
             }
@@ -88,14 +88,14 @@ namespace AuctionManagementSystem
             adabter = new OracleDataAdapter(cmdstr,ordb);
             ds = new DataSet();
             adabter.Fill(ds);
-            myitemview.DataSource = ds.Tables[0];
+            myItemView.DataSource = ds.Tables[0];
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeSeller hs = new HomeSeller();
-            hs.Show();
+            HomeSeller homeSeller = new HomeSeller();
+            homeSeller.Show();
         }
 
         private void itmview_CellContentClick(object sender, DataGridViewCellEventArgs e)

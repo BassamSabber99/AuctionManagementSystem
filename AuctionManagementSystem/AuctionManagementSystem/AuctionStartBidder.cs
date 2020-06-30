@@ -23,12 +23,12 @@ namespace AuctionManagementSystem
         public void ReLoad()
         {
 
-            bidderview.ReadOnly = true;
-            bidderview.Columns.Clear();
-            bidderview.Rows.Clear();
-            bidderview.ColumnCount = 2;
-            bidderview.Columns[0].Name = "Bidder_Name";
-            bidderview.Columns[1].Name = "Bid_Value";
+            bidderView.ReadOnly = true;
+            bidderView.Columns.Clear();
+            bidderView.Rows.Clear();
+            bidderView.ColumnCount = 2;
+            bidderView.Columns[0].Name = "Bidder_Name";
+            bidderView.Columns[1].Name = "Bid_Value";
 
             OracleCommand oc = new OracleCommand();
             oc.Connection = con;
@@ -41,7 +41,7 @@ namespace AuctionManagementSystem
             OracleDataReader dr4 = oc.ExecuteReader();
             while (dr4.Read())
             {
-                bidderview.Rows.Add(dr4[0], dr4[1]);
+                bidderView.Rows.Add(dr4[0], dr4[1]);
             }
             dr4.Close();
         }
@@ -93,7 +93,7 @@ namespace AuctionManagementSystem
                         MessageBox.Show("Status Changed Successfully");
                         bidbtn.Enabled = false;
                     }
-                    if(bidderview.RowCount == 0)
+                    if(bidderView.RowCount == 0)
                     {
                         MessageBox.Show("No One Buy This Items !!!");
                         return;
@@ -233,8 +233,8 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AllAuctionBidder alb = new AllAuctionBidder();
-            alb.Show();
+            AllAuctionBidder allAuctionBidder = new AllAuctionBidder();
+            allAuctionBidder.Show();
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -252,7 +252,6 @@ namespace AuctionManagementSystem
             {
                 using (con =new OracleConnection(ordb))
                 {
-                    bool isin = false;
                     int maxVal = 0;
                     con.Open();
                     OracleCommand cmd = new OracleCommand();

@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuctionStartSeller));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bidderview = new System.Windows.Forms.DataGridView();
+            this.bidderView = new System.Windows.Forms.DataGridView();
             this.edatetxt = new System.Windows.Forms.Label();
             this.labe = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,7 +53,7 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bidderview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidderView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,7 +74,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bidderview);
+            this.groupBox2.Controls.Add(this.bidderView);
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(40, 88);
@@ -84,15 +84,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bidders";
             // 
-            // bidderview
+            // bidderView
             // 
-            this.bidderview.BackgroundColor = System.Drawing.Color.Maroon;
-            this.bidderview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bidderview.GridColor = System.Drawing.Color.DarkRed;
-            this.bidderview.Location = new System.Drawing.Point(6, 19);
-            this.bidderview.Name = "bidderview";
-            this.bidderview.Size = new System.Drawing.Size(240, 236);
-            this.bidderview.TabIndex = 0;
+            this.bidderView.BackgroundColor = System.Drawing.Color.Maroon;
+            this.bidderView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bidderView.GridColor = System.Drawing.Color.DarkRed;
+            this.bidderView.Location = new System.Drawing.Point(6, 19);
+            this.bidderView.Name = "bidderView";
+            this.bidderView.Size = new System.Drawing.Size(240, 236);
+            this.bidderView.TabIndex = 0;
             // 
             // edatetxt
             // 
@@ -292,7 +292,7 @@
             this.Load += new System.EventHandler(this.AuctionStartSeller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bidderview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bidderView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -308,7 +308,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView bidderview;
+        private System.Windows.Forms.DataGridView bidderView;
         private System.Windows.Forms.Label edatetxt;
         private System.Windows.Forms.Label labe;
         private System.Windows.Forms.GroupBox groupBox1;

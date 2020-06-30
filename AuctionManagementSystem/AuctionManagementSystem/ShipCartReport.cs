@@ -16,7 +16,7 @@ namespace AuctionManagementSystem
     {
         string ordb = "data source = orcl ; user id = hr ; password = hr";
         OracleConnection con;
-        ReportShipCart cr;
+        ReportShipCart report3;
         public ShipCartReport()
         {
             InitializeComponent();
@@ -31,9 +31,9 @@ namespace AuctionManagementSystem
 
         private void ShipCartReport_Load(object sender, EventArgs e)
         {
-            cr = new ReportShipCart();
-            cr.SetParameterValue(0, GlobalID.ID);
-            crystalReportViewer1.ReportSource = cr;
+            report3 = new ReportShipCart();
+            report3.SetParameterValue(0, GlobalID.ID);
+            crystalReportViewer1.ReportSource = report3;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -43,9 +43,9 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ShipCartReport scr = new ShipCartReport();
+            ShipCartReport shipCartReport = new ShipCartReport();
             this.Hide();
-            scr.Show();
+            shipCartReport.Show();
         }
     }
 }

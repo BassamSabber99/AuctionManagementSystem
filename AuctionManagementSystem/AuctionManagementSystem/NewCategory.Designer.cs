@@ -37,7 +37,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lcat = new System.Windows.Forms.ListBox();
+            this.categoryList = new System.Windows.Forms.ListBox();
             this.catnametxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.addcatbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,18 +120,18 @@
             this.bunifuElipse1.ElipseRadius = 80;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // lcat
+            // categoryList
             // 
-            this.lcat.BackColor = System.Drawing.Color.Brown;
-            this.lcat.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lcat.ForeColor = System.Drawing.Color.White;
-            this.lcat.FormattingEnabled = true;
-            this.lcat.ItemHeight = 28;
-            this.lcat.Location = new System.Drawing.Point(764, 121);
-            this.lcat.Name = "lcat";
-            this.lcat.Size = new System.Drawing.Size(152, 228);
-            this.lcat.TabIndex = 39;
-            this.lcat.SelectedIndexChanged += new System.EventHandler(this.lcat_SelectedIndexChanged);
+            this.categoryList.BackColor = System.Drawing.Color.Brown;
+            this.categoryList.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryList.ForeColor = System.Drawing.Color.White;
+            this.categoryList.FormattingEnabled = true;
+            this.categoryList.ItemHeight = 28;
+            this.categoryList.Location = new System.Drawing.Point(764, 121);
+            this.categoryList.Name = "categoryList";
+            this.categoryList.Size = new System.Drawing.Size(152, 228);
+            this.categoryList.TabIndex = 39;
+            this.categoryList.SelectedIndexChanged += new System.EventHandler(this.lcat_SelectedIndexChanged);
             // 
             // catnametxt
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addcatbtn);
             this.Controls.Add(this.catnametxt);
-            this.Controls.Add(this.lcat);
+            this.Controls.Add(this.categoryList);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -236,7 +236,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.ListBox lcat;
+        private System.Windows.Forms.ListBox categoryList;
         private Bunifu.Framework.UI.BunifuThinButton2 addcatbtn;
         private Bunifu.Framework.UI.BunifuMetroTextbox catnametxt;
         private System.Windows.Forms.Label label1;

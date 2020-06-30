@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.allitems = new System.Windows.Forms.ComboBox();
+            this.allItems = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.createbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button1 = new System.Windows.Forms.Button();
@@ -222,13 +222,13 @@
             this.label5.TabIndex = 45;
             this.label5.Text = "*Write Time In this format  hh:mm:ss (eg. 12:10:00 PM OR Am)\r\n\r\n";
             // 
-            // allitems
+            // allItems
             // 
-            this.allitems.FormattingEnabled = true;
-            this.allitems.Location = new System.Drawing.Point(419, 359);
-            this.allitems.Name = "allitems";
-            this.allitems.Size = new System.Drawing.Size(184, 21);
-            this.allitems.TabIndex = 98;
+            this.allItems.FormattingEnabled = true;
+            this.allItems.Location = new System.Drawing.Point(419, 359);
+            this.allItems.Name = "allItems";
+            this.allItems.Size = new System.Drawing.Size(184, 21);
+            this.allItems.TabIndex = 98;
             // 
             // label6
             // 
@@ -285,7 +285,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.createbtn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.allitems);
+            this.Controls.Add(this.allItems);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox allitems;
+        private System.Windows.Forms.ComboBox allItems;
         private Bunifu.Framework.UI.BunifuThinButton2 createbtn;
         private System.Windows.Forms.Button button1;
     }

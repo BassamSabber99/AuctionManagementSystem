@@ -39,8 +39,8 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login l = new Login();
-            l.Show();
+            Login login = new Login();
+            login.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -130,8 +130,8 @@ namespace AuctionManagementSystem
                     }
                     
                     MessageBox.Show("ADD SUCCESSFULLY !!!");
-                    Login l = new Login();
-                    l.Show();
+                    Login login = new Login();
+                    login.Show();
                     this.Hide();
 
                 }

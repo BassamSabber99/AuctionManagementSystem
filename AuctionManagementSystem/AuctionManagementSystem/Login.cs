@@ -86,8 +86,8 @@ namespace AuctionManagementSystem
         private void registerbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registration r = new Registration();
-            r.Show();
+            Registration registration = new Registration();
+            registration.Show();
         }
 
         private void Login_Load(object sender, EventArgs e)

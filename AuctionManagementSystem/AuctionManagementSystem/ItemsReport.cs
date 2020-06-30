@@ -17,7 +17,7 @@ namespace AuctionManagementSystem
     {
         string ordb = "data source = orcl ; user id = hr ; password = hr";
         OracleConnection con;
-        ReportShowAllItems cr;
+        ReportShowAllItems report2;
         public ItemsReport()
         {
             InitializeComponent();
@@ -37,24 +37,24 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            SearchForItems sfi = new SearchForItems();
-            sfi.Hide();
+            SearchForItems searchForItem = new SearchForItems();
+            searchForItem.Hide();
             this.Hide();
         }
 
         private void ItemsReport_Load(object sender, EventArgs e)
         {
-            cr = new ReportShowAllItems();
-            foreach(ParameterDiscreteValue v in cr.ParameterFields[0].DefaultValues)
+            report2 = new ReportShowAllItems();
+            foreach(ParameterDiscreteValue v in report2.ParameterFields[0].DefaultValues)
             {
-                valcombobox.Items.Add(v.Value);
+                valCombobox.Items.Add(v.Value);
             }
         }
 
         private void genebtn_Click(object sender, EventArgs e)
         {
-            cr.SetParameterValue(0, valcombobox.Text);
-            crystalReportViewer1.ReportSource = cr;
+            report2.SetParameterValue(0, valCombobox.Text);
+            crystalReportViewer1.ReportSource = report2;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -25,16 +25,16 @@ namespace AuctionManagementSystem
         {
             using (con = new OracleConnection(ordb))
             {
-                aucttionview.ReadOnly = true;
-                aucttionview.Columns.Clear();
-                aucttionview.Rows.Clear();
-                aucttionview.ColumnCount = 6;
-                aucttionview.Columns[0].Name = "ID";
-                aucttionview.Columns[1].Name = "Start Date";
-                aucttionview.Columns[2].Name = "End Date";
-                aucttionview.Columns[3].Name = "Item Name";
-                aucttionview.Columns[4].Name = "Item Value";
-                aucttionview.Columns[5].Name = "Status";
+                auctionsView.ReadOnly = true;
+                auctionsView.Columns.Clear();
+                auctionsView.Rows.Clear();
+                auctionsView.ColumnCount = 6;
+                auctionsView.Columns[0].Name = "ID";
+                auctionsView.Columns[1].Name = "Start Date";
+                auctionsView.Columns[2].Name = "End Date";
+                auctionsView.Columns[3].Name = "Item Name";
+                auctionsView.Columns[4].Name = "Item Value";
+                auctionsView.Columns[5].Name = "Status";
 
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
@@ -53,14 +53,14 @@ namespace AuctionManagementSystem
                 btn.Name = "btgrid";
                 btn.Text = "Enter";
                 btn.UseColumnTextForButtonValue = true;
-                aucttionview.Columns.Add(btn);
+                auctionsView.Columns.Add(btn);
 
 
 
 
                 while (dr.Read())
                 {
-                    aucttionview.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
+                    auctionsView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
 
 
 
@@ -84,9 +84,9 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            HomerBidder hb = new HomerBidder();
+            HomerBidder homeBidder = new HomerBidder();
             this.Hide();
-            hb.Show();
+            homeBidder.Show();
         }
 
         private void aucttionview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -96,13 +96,13 @@ namespace AuctionManagementSystem
 
         private void aucttionview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (aucttionview.CurrentCell.ColumnIndex.Equals(6) && e.RowIndex != -1)
+            if (auctionsView.CurrentCell.ColumnIndex.Equals(6) && e.RowIndex != -1)
             {
-                if (aucttionview.CurrentCell != null && aucttionview.CurrentCell.Value != null)
+                if (auctionsView.CurrentCell != null && auctionsView.CurrentCell.Value != null)
                 {
                     con = new OracleConnection(ordb);
                     con.Open();
-                    GlobalID.AucID = Convert.ToInt32(aucttionview.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    GlobalID.AucID = Convert.ToInt32(auctionsView.Rows[e.RowIndex].Cells[0].Value.ToString());
                     int balance = 0 , item_val = 0;
                     OracleCommand check = new OracleCommand();
                     check.Connection = con;
@@ -116,7 +116,7 @@ namespace AuctionManagementSystem
                     }
                     drcheck.Close();
 
-                    item_val = Convert.ToInt32(aucttionview.Rows[e.RowIndex].Cells[4].Value.ToString());
+                    item_val = Convert.ToInt32(auctionsView.Rows[e.RowIndex].Cells[4].Value.ToString());
 
 
 
@@ -137,17 +137,17 @@ namespace AuctionManagementSystem
                         try
                         {
                             insert.ExecuteNonQuery();
-                            MessageBox.Show("Auction Started : " + aucttionview.Rows[e.RowIndex].Cells[0].Value.ToString());
+                            MessageBox.Show("Auction Started : " + auctionsView.Rows[e.RowIndex].Cells[0].Value.ToString());
                             this.Hide();
-                            AuctionStartBidder asb = new AuctionStartBidder();
-                            asb.Show();
+                            AuctionStartBidder auctionStartBidder = new AuctionStartBidder();
+                            auctionStartBidder.Show();
                         }
                         catch
                         {
-                            MessageBox.Show("Auction Started : " + aucttionview.Rows[e.RowIndex].Cells[0].Value.ToString());
+                            MessageBox.Show("Auction Started : " + auctionsView.Rows[e.RowIndex].Cells[0].Value.ToString());
                             this.Hide();
-                            AuctionStartBidder asb = new AuctionStartBidder();
-                            asb.Show();
+                            AuctionStartBidder auctionStartBidder = new AuctionStartBidder();
+                            auctionStartBidder.Show();
                         }
                       
                     }

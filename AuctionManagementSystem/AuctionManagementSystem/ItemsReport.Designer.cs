@@ -40,7 +40,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
-            this.valcombobox = new System.Windows.Forms.ComboBox();
+            this.valCombobox = new System.Windows.Forms.ComboBox();
             this.genebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,13 +153,13 @@
             this.label1.TabIndex = 92;
             this.label1.Text = "Value:";
             // 
-            // valcombobox
+            // valCombobox
             // 
-            this.valcombobox.FormattingEnabled = true;
-            this.valcombobox.Location = new System.Drawing.Point(426, 111);
-            this.valcombobox.Name = "valcombobox";
-            this.valcombobox.Size = new System.Drawing.Size(121, 21);
-            this.valcombobox.TabIndex = 94;
+            this.valCombobox.FormattingEnabled = true;
+            this.valCombobox.Location = new System.Drawing.Point(426, 111);
+            this.valCombobox.Name = "valCombobox";
+            this.valCombobox.Size = new System.Drawing.Size(121, 21);
+            this.valCombobox.TabIndex = 94;
             // 
             // genebtn
             // 
@@ -194,7 +194,7 @@
             this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(950, 500);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.valcombobox);
+            this.Controls.Add(this.valCombobox);
             this.Controls.Add(this.genebtn);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panel1);
@@ -227,7 +227,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox valcombobox;
+        private System.Windows.Forms.ComboBox valCombobox;
         private Bunifu.Framework.UI.BunifuThinButton2 genebtn;
     }
 }

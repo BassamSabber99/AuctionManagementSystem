@@ -223,30 +223,30 @@ namespace AuctionManagementSystem
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NewCategory nc = new NewCategory();
-            nc.Show();
+            NewCategory newCategory = new NewCategory();
+            newCategory.Show();
             
         }
 
         private void updaccbtn_Click(object sender, EventArgs e)
         {
-            UpdateSeller us = new UpdateSeller();
+            UpdateSeller updateSeller = new UpdateSeller();
             this.Hide();
-            us.Show();
+            updateSeller.Show();
         }
 
         private void additmbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ItemsOperation io = new ItemsOperation();
-            io.Show();
+            ItemsOperation itemOpertation = new ItemsOperation();
+            itemOpertation.Show();
         }
 
         private void createaucbtn_Click(object sender, EventArgs e)
         {
-            AllAuctions ca = new AllAuctions();
+            AllAuctions allAuction = new AllAuctions();
             this.Hide();
-            ca.Show();
+            allAuction.Show();
         }
 
         private void deletebtn_Click(object sender, EventArgs e)

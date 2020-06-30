@@ -38,8 +38,8 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomerBidder hb = new HomerBidder();
-            hb.Show();
+            HomerBidder homeBidder = new HomerBidder();
+            homeBidder.Show();
         }
 
         private void ShippingCart_Load(object sender, EventArgs e)
@@ -98,9 +98,9 @@ namespace AuctionManagementSystem
 
         private void allaucbtn_Click(object sender, EventArgs e)
         {
-            ShipCartReport scr = new ShipCartReport();
+            ShipCartReport shipCartReport = new ShipCartReport();
             this.Hide();
-            scr.Show();
+            shipCartReport.Show();
         }
     }
 }

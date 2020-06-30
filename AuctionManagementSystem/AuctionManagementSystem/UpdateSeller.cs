@@ -36,9 +36,9 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            HomeSeller hs = new HomeSeller();
+            HomeSeller homeseller = new HomeSeller();
             this.Hide();
-            hs.Show();
+            homeseller.Show();
         }
 
         private void UpdateSeller_Load(object sender, EventArgs e)

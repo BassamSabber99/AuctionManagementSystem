@@ -43,7 +43,7 @@ namespace AuctionManagementSystem
                 OracleDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    allitems.Items.Add(dr[0]);
+                    allItems.Items.Add(dr[0]);
                 }
                 dr.Close();
             }
@@ -71,11 +71,11 @@ namespace AuctionManagementSystem
             string datetime1 = startDate+" "+ starttime;
             string datetime2 = endDate +" "+endtime;
 
-            DateTime dat = new DateTime();
-            dat = Convert.ToDateTime(datetime1);
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(datetime1);
 
 
-            MessageBox.Show("Datetime1:"+ dat + " Datetime2:"+ datetime2);
+            MessageBox.Show("Datetime1:"+ date + " Datetime2:"+ datetime2);
 
             
 
@@ -96,9 +96,9 @@ namespace AuctionManagementSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            AllAuctions ac = new AllAuctions();
+            AllAuctions allAuction = new AllAuctions();
             this.Hide();
-            ac.Show();
+            allAuction.Show();
         }
 
         private void createbtn_Click(object sender, EventArgs e)
@@ -112,15 +112,8 @@ namespace AuctionManagementSystem
             string datetime1 = startDate + " " + starttime;
             string datetime2 = endDate + " " + endtime;
 
-            DateTime dat = new DateTime();
-            dat = Convert.ToDateTime(datetime1);
-            /*
-            int hh = dat.Hour;
-            int mm = dat.Minute;
-
-            int day = dat.Day;
-            int month = dat.Month;
-            */
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(datetime1);
             int maxID, newID;
             using (con = new OracleConnection(ordb))
             {
@@ -143,10 +136,10 @@ namespace AuctionManagementSystem
                 cmd2.CommandType = CommandType.StoredProcedure;
                 cmd2.Parameters.Add("AID", newID);
                 cmd2.Parameters.Add("SID", GlobalID.ID);
-                cmd2.Parameters.Add("IID", Convert.ToInt16(allitems.SelectedItem.ToString()));
+                cmd2.Parameters.Add("IID", Convert.ToInt16(allItems.SelectedItem.ToString()));
                 cmd2.Parameters.Add("sTime", datetime1);
                 cmd2.Parameters.Add("eTime", datetime2);
-                if(dat <= DateTime.Now)
+                if(date <= DateTime.Now)
                 {
                     cmd2.Parameters.Add("state", "open");
                     //hh <= hhn && mm <= mmn && day <= dayn && month <= monthn
@@ -175,11 +168,11 @@ namespace AuctionManagementSystem
             string datetime1 = startDate + " " + starttime;
             string datetime2 = endDate + " " + endtime;
 
-            DateTime dat = new DateTime();
-            dat = Convert.ToDateTime(datetime1);
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(datetime1);
 
-            int hh = dat.Hour;
-            int mm = dat.Minute;
+            int hh = date.Hour;
+            int mm = date.Minute;
 
 
             MessageBox.Show("Datetime1:" + hh +":"+mm + " Datetime2:" + datetime2);

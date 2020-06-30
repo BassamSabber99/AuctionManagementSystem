@@ -48,9 +48,9 @@ namespace AuctionManagementSystem
                 }
                 else
                 {
-                    for (int i = 0; i < lcat.Items.Count; i++)
+                    for (int i = 0; i < categoryList.Items.Count; i++)
                     {
-                        if (lcat.Items[i].ToString().Equals(catnametxt.Text.Trim().ToString(),StringComparison.InvariantCultureIgnoreCase))
+                        if (categoryList.Items[i].ToString().Equals(catnametxt.Text.Trim().ToString(),StringComparison.InvariantCultureIgnoreCase))
                         {
                             MessageBox.Show("This Category Is Already Exist !!!");
                             return;
@@ -63,7 +63,7 @@ namespace AuctionManagementSystem
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("catname", catnametxt.Text);
                     int ret = cmd.ExecuteNonQuery();
-                    lcat.Items.Add(catnametxt.Text.Trim().ToString());
+                    categoryList.Items.Add(catnametxt.Text.Trim().ToString());
                     catnametxt.Focus();
                     catnametxt.Text = " ";
                     if (ret != -1)
@@ -86,7 +86,7 @@ namespace AuctionManagementSystem
                 OracleDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lcat.Items.Add(dr[1]);
+                    categoryList.Items.Add(dr[1]);
                 }
                 dr.Close();
             }
@@ -100,8 +100,8 @@ namespace AuctionManagementSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeSeller hs = new HomeSeller();
-            hs.Show();
+            HomeSeller homeSeller = new HomeSeller();
+            homeSeller.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

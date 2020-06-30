@@ -38,7 +38,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.itmview = new System.Windows.Forms.DataGridView();
+            this.itmView = new System.Windows.Forms.DataGridView();
             this.itmnametxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -48,7 +48,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itmview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itmView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -131,14 +131,14 @@
             this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // itmview
+            // itmView
             // 
-            this.itmview.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.itmview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itmview.Location = new System.Drawing.Point(135, 136);
-            this.itmview.Name = "itmview";
-            this.itmview.Size = new System.Drawing.Size(598, 210);
-            this.itmview.TabIndex = 48;
+            this.itmView.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.itmView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itmView.Location = new System.Drawing.Point(135, 136);
+            this.itmView.Name = "itmView";
+            this.itmView.Size = new System.Drawing.Size(598, 210);
+            this.itmView.TabIndex = 48;
             // 
             // itmnametxt
             // 
@@ -234,7 +234,7 @@
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.itmnametxt);
-            this.Controls.Add(this.itmview);
+            this.Controls.Add(this.itmView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.ForeColor = System.Drawing.Color.Black;
@@ -250,7 +250,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itmview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itmView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.DataGridView itmview;
+        private System.Windows.Forms.DataGridView itmView;
         private Bunifu.Framework.UI.BunifuMaterialTextbox itmnametxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
